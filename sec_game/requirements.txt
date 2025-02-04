@@ -1,1 +1,106 @@
-tk
+### **📌 `requirements.md` - SEC Football Card Game Project**  
+
+# **SEC Football Card Game - Project Requirements**  
+
+## **1️⃣ Project Overview**  
+The SEC Football Card Game is a Python-based **Tkinter GUI application** that simulates collecting and managing football team cards. The project is structured to ensure **easy installation, smooth execution, and efficient GitHub management.**  
+
+## **2️⃣ Project Structure**  
+
+```plaintext
+/
+├── .gitattributes           # Git LFS tracking for large files
+├── .gitignore               # Ignore unnecessary files
+├── cardgame_update.py       # Handles game-specific updates
+├── github_update.py         # Automates GitHub sync, LFS tracking, and push fixes
+├── sec_game/                # Main game directory
+│   ├── logos/               # Contains team logo images
+│   ├── main.py              # Primary game logic (Tkinter-based)
+│   ├── requirements.txt     # Python dependencies for the game
+├── tkinter_fix_scripts/     # Fix scripts for Tkinter setup
+│   ├── fix_tkinter.py       # Automates Tkinter installation fixes
+```
+
+## **3️⃣ Dependencies & Installation**  
+
+### **Python & Required Libraries**
+- The project requires **Python 3.10+**.
+- Install dependencies using:
+  ```sh
+  pip install -r sec_game/requirements.txt
+  ```
+- The `requirements.txt` file should include:
+  ```plaintext
+  tk  # Tkinter for GUI functionality
+  ```
+
+### **Tkinter Fixes (MacOS & Linux)**
+- If Tkinter is not working, use the `fix_tkinter.py` script:
+  ```sh
+  python3 tkinter_fix_scripts/fix_tkinter.py
+  ```
+
+
+## **4️⃣ GitHub & Version Control**
+### **Git LFS (Large File Storage)**
+- The **logos (`sec_game/logos/*.png`)** are large assets and must be tracked using **Git LFS**.
+- If missing, set up Git LFS manually:
+  ```sh
+  git lfs track "sec_game/logos/*.png"
+  git add .gitattributes
+  git commit -m "Configured Git LFS for logo images"
+  git push origin main
+  ```
+
+### **GitHub Sync Automation**
+- **Use `github_update.py` to:**
+  - Sync `.gitignore`  
+  - Track LFS files  
+  - Handle push conflicts  
+  ```sh
+  python3 github_update.py
+  ```
+
+## **5️⃣ File Management & Cleanup**
+### **Ignoring Unnecessary Files**
+The `.gitignore` file must contain:
+```plaintext
+# macOS system files
+.DS_Store
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+env/
+venv/
+
+# Setup scripts
+setup_project.py
+push_to_github.py
+github_update.py
+```
+
+### **Removing Committed `.DS_Store` Files**
+If `.DS_Store` files were mistakenly committed:
+```sh
+git rm --cached .DS_Store
+git rm --cached sec_game/.DS_Store
+git rm --cached sec_game/logos/.DS_Store
+git commit -m "Removed unnecessary .DS_Store files"
+git push origin main
+```
+
+## **6️⃣ Deployment & Running the Game**
+To run the **SEC Football Card Game**, execute:
+```sh
+python3 sec_game/main.py
+```
+
+## **7️⃣ Future Enhancements**
+- Implement **multi-user high score tracking**.  
+- Introduce **online leaderboards**.  
+- Expand **game customization features**.  
+
