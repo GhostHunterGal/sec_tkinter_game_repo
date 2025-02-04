@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+
+# Ignore Python cache files
+=======
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
+>>>>>>> dc44131 (Updated .gitignore to exclude setup scripts)
 __pycache__/
 *.pyc
 *.pyo
@@ -12,6 +18,8 @@ __pycache__/
 # Ignore environment files
 .env
 venv/
+<<<<<<< HEAD
+=======
 ENV/
 env.bak/
 venv.bak/
@@ -49,3 +57,24 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+=======
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore environment files
+.env
+venv/
+>>>>>>> a8dd55d (Initial commit - SEC Football Card Game + Tkinter Fix)
+setup_project.py
+push_to_github.py
+github_update.py
+>>>>>>> dc44131 (Updated .gitignore to exclude setup scripts)
