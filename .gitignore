@@ -77,4 +77,5 @@ venv/
 setup_project.py
 push_to_github.py
 github_update.py
+cardgame_update.py
 >>>>>>> dc44131 (Updated .gitignore to exclude setup scripts)
